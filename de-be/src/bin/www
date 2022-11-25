@@ -1,0 +1,217 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+import app from '../app';
+import debug from 'debug';
+import http from 'http';
+import schedule from 'node-schedule';
+
+import models from '../models';
+import {createCreativeDir, setPlatformSettings,} from '../services/defaultService';
+import {
+  cacheAllBillingDetails,
+  cacheAllBudget,
+  cacheAllCampaigns,
+  cacheAllCampaignWBlistSubIds,
+  cacheAllIntegrationCampaigns,
+  cacheAllUsers,
+  cacheCategories,
+  cacheCheckList,
+  cacheWlidSettings,
+} from '../services/caching/bulkCreate';
+import moment from 'moment';
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+const normalizePort = (val) => {
+  const port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+};
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+const onError = (error) => {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  const bind = typeof port === 'string' ?
+        'Pipe ' + port :
+        'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+};
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+const onListening = () => {
+  const addr = server.address();
+  const bind = typeof addr === 'string' ?
+        'pipe ' + addr :
+        'port ' + addr.port;
+  debug('Listening on ' + bind);
+};
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+const port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+const start = Date.now();
+const server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+
+models.sequelize.sync().then(async () => {
+  /**
+   * Sets Platform settings for Admin - user activation settings
+   */
+  await setPlatformSettings();
+
+
+  /**
+   * Caches wlid settings and impression, click handler domains
+   */
+  await cacheWlidSettings();
+
+  /**
+   * Used to create a default manager on desk, we no longer require this since
+   * user management is now moved to Console
+   */
+  //await createDefaultAccountManager();
+
+
+  /**
+   * Creates directories on Rest for creatives
+   */
+  await createCreativeDir();
+
+
+  /**
+   * Cache all campaigns, include model - budget, inventories, creativeTag
+   */
+  await cacheAllCampaigns();
+
+  /**
+   * Cache all integrated campaigns - possibly null
+   */
+  await cacheAllIntegrationCampaigns();
+
+
+  /**
+   * cache all campaigns with testlinks - possibly null
+   */
+  await cacheCheckList();
+
+
+  /**
+   * Caches publishers, advertisers and their campaigns
+   */
+  await cacheAllUsers();
+
+
+  /**
+   * caches billing details of both publisher and advertisers
+   */
+  await cacheAllBillingDetails();
+
+
+  /**
+   * caches budgets of campaigns - daily, hourly, total etc
+   */
+  await cacheAllBudget();
+
+  await cacheCategories();
+
+
+  await cacheAllCampaignWBlistSubIds();
+  //await cacheAllAudienceUsers();
+
+  server.listen(port, () => {
+    const end = Date.now();
+    console.log(`Server listening on: ${port}. Started in ${end - start}ms.`);
+  });
+  server.on('error', onError);
+  server.on('listening', onListening);
+});
+
+// TODO Move all schedulers to another one service
+
+/**
+ * Task runs every day in midnight.
+ */
+//schedule.scheduleJob('0 0 0 * * *', () => runActivationBy('days'));
+
+/**
+ * Task runs every day in 12:00.
+ */
+let time = moment().set('hour', 0);
+time.hour(0);
+time.minute(1);
+time.second(0);
+time = time.format('YYYY-MM-DD HH:mm:ss');
+
+
+// schedule.scheduleJob(time, () => taskInventoryCaching());
+// taskInventoryCaching();
+/**
+ * Task runs every hour.
+ */
+//schedule.scheduleJob('0 0 * ? * *', () => runActivationBy('hours'));
+
+/**
+ * Update white/black list cache every 10 minutes
+ */
+schedule.scheduleJob('*/10 * * * *', async () => {
+  await cacheAllCampaignWBlistSubIds();
+});
+
+/**
+ * Update audience cache every 10 minutes
+ */
+
+// schedule.scheduleJob('*/10 * * * *', async () => {
+//   await cacheAllAudienceUsers();
+// });
+

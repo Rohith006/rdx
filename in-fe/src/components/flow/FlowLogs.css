@@ -1,0 +1,40 @@
+.FlowLog {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.FlowLogHeader {
+    font-weight: 600;
+    border-bottom: #ccc 1px solid;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.FlowLogRows {
+    overflow: auto;
+    height: calc(100% - 53px);
+}
+
+.FlowLogRow {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    padding: 5px;
+    border-bottom: solid #ccc 1px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.FlowLogRow .FlowLogMessage {
+    display: flex;
+    align-items: center;
+}
+
+.FlowLogRow .FlowLogDetails {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,145 @@
+.DebugAndProfile {
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+    user-select: none;
+}
+
+.Debugging {
+    height: inherit;
+    overflow: auto;
+    user-select: text;
+    flex: 1;
+}
+
+.Profiling {
+    position: relative;
+    display: grid;
+    grid-template-rows: 45px 1fr;
+    border-right: solid 1px #ccc;
+    height: inherit;
+    flex: 1;
+}
+
+.Profiling > .TaskHeader {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: black;
+    font-weight: 600;
+    border-bottom: solid 1px #ccc
+}
+
+.TaskRows {
+    overflow-y: auto;
+    height: calc(100% - 50px);
+}
+
+.TaskRows .TaskRow {
+    position: relative;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-top: dashed 1px #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.TaskRow:hover {
+    background-color: #eee;
+    color: black;
+}
+
+.HighRow {
+    background-color: #ddd;
+}
+
+.CurrentCall {
+    background-color: #888 !important;
+    color: white !important;
+}
+
+.TaskHeader .TaskSq,
+.TaskRow .TaskSq {
+    min-width: 32px;
+    padding: 5px 5px 5px 10px;
+    position: sticky;
+    left: 0;
+    background-color: inherit;
+}
+.TaskHeader .TaskName,
+.TaskRow .TaskName {
+    width: 300px;
+    border-right: solid 1px #ccc;
+    padding: 0 5px;
+    position: sticky;
+    left: 31px;
+    background-color: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.TaskHeader .TaskRunTime,
+.TaskRow .TaskRunTime {
+    padding: 0 5px;
+    border-right: solid 1px #ccc;
+    min-width: 100px;
+    text-align: right;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.TaskHeader .TaskBar,
+.TaskRow .TaskBar {
+    position: relative;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-left: 5px;
+}
+
+.TaskRow .TaskBar .Task {
+    position: absolute;
+    background-color: #d81b60;
+    border-radius: 5px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TaskRow .TaskBar .Task .TaskBall {
+    background-color: white;
+    border: 2px solid #d81b60;
+    border-radius: 50%;
+    min-height: 10px;
+    min-width: 10px;
+}
+
+.TaskRow .FailStatus {
+    color: white;
+    background-color: #d81b60;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 12px;
+}
+
+.TaskRow .OKStatus {
+    color: white;
+    background-color: #43a047;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    font-size: 12px;
+}

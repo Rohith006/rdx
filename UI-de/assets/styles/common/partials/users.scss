@@ -1,0 +1,90 @@
+.userContainer {
+  margin-top: -2em;
+}
+
+.userLine {
+  border: 1px solid #e8e8e8;
+  margin-top: -2%;
+}
+
+.userField {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 0.933em;
+  line-height: 1.4em;
+  color: $greyish-black;
+  margin-bottom: 8px;
+}
+
+.userDivFlex {
+  display: flex;
+  flex-direction: row;
+}
+
+.userDivCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.userRoleWrapper {
+  margin-top: 4%;
+}
+
+.userRole {
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 0.933em;
+  line-height: 1.4em;
+  color: $greyish-brown;
+}
+
+.userRadio {
+  margin-right: 3%;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 0.933em;
+  line-height: 1.4em;
+  color: $greyish-black;
+}
+
+.userRulesContainer {
+  padding: 3% 0%;
+}
+
+.userRulesTitle {
+  margin-left: 2%;
+}
+
+.userRulesCheck {
+  margin-left: 2em;
+  margin-bottom: 7.69em;
+}
+
+.userRulesCheckbox {
+  width: 7.1em;
+  height: 1.4em;
+  align-self: center;
+  margin-right: 1em;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+.userSelectTitle {
+  font-weight: 500;
+  font-size: 0.933em;
+  line-height: 1.4em;
+  margin-bottom: 8px;
+  color: $greyish-black;
+}
+
+.userSaveBtn {
+  padding: 10px;
+}
+.card-bd {
+  background-color: #ffffff;
+  border: 0px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-top: 8px;
+}

@@ -1,0 +1,59 @@
+.custom-radio {
+  display: none;
+  $chbx_size: 20px;
+  $tt: all 0.3s ease-in-out;
+
+  + label {
+    font-weight: normal;
+    cursor: pointer;
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: $chbx_size;
+      height: $chbx_size;
+      cursor: pointer;
+      border-radius: 50%;
+      position: relative;
+      border: 1px solid $steel-50;
+      &:before {
+        content: "";
+        width: $chbx_size / 3;
+        height: $chbx_size / 3;
+        border-radius: 50%;
+        background-color: $white;
+        @include absolute-center();
+        @include transition(opacity $tt);
+      }
+    }
+    &:hover {
+      span {
+        &:before {
+          background-color: $steel-50;
+
+        }
+      }
+    }
+  }
+  &:checked + label span {
+    border-color: $neutral-400;
+    background-color: $neutral-400;
+    &::before {
+      @include opacity(1);
+      background-color: $white;
+    }
+  }
+
+  &:disabled + label {
+    @include opacity(.5);
+
+    &, span {
+      cursor: default;
+    }
+  }
+}
+.radio-control {
+  margin-bottom: 15px;
+  font-size:  em(13);
+  color: $greyish-brown;
+}

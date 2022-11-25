@@ -1,0 +1,8 @@
+@function contrast($background: 'light', $type: 'primary') {
+  $map: map-get($contrast-colors, $background);
+  @return map-get($map, $type);
+}
+
+@mixin contrast($background: 'light', $type: 'primary') {
+  color: contrast($background, $type)
+}

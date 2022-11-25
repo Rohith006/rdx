@@ -1,0 +1,23 @@
+.integration {
+  &_cover {
+    &-item {
+      font-size: em(13);
+      color: $greyish-brown;
+      margin-bottom: 24px;
+      line-height: 1.54;
+      .subheading {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+      .text-input {
+        margin: 15px 0;
+      }
+
+      .checkbox-control {
+        display: inline-block;
+        margin-right: 15px;
+      }
+    }
+  }
+}

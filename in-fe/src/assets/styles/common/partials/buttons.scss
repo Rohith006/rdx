@@ -1,0 +1,63 @@
+.btn {
+  &_apply {
+    background-color: #d7e0ff;
+    display: flex;
+    height: max-content;
+    padding: 8px 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  &_group {
+    @include flexbox;
+    @include justify-content(center);
+    margin: 100px 0;
+  }
+  &_cancel {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    height: 40px;
+    width: 102px;
+    border: 1px solid $light-black;
+    border-radius: 4px;
+    color: $light-black;
+    &:hover {
+      background-color: $white-three;
+    }
+    &.delete {
+      margin-left: 8px;
+      cursor: pointer;
+      width: 40px;
+      height: 40px;
+      img {
+        height: 12px;
+        max-width: 10px;
+      }
+    }
+  }
+  &_next {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 102px;
+    background-color: $primary-red !important;
+    border-radius: 4px;
+    color: $white;
+    margin-left: 16px;
+    &:hover {
+      background-color: $primary-red-hover !important;
+    }
+    &.content {
+      width: max-content;
+    }
+  }
+}

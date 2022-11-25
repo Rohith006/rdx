@@ -1,0 +1,75 @@
+@import "../../../../node_modules/normalize.scss/normalize.scss";
+@import "../custom/ui-variables.scss";
+@import "../mixin_functions/mixin/flexbox-mixin.scss";
+@import "../mixin_functions/mixin/media-functions.scss";
+@import "../mixin_functions/mixin/mixin.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&display=swap");
+@import "partials/appContainer.scss";
+@import "partials/appToggle.scss";
+@import "partials/buttons.scss";
+@import "partials/header.scss";
+@import "partials/tuiForms.scss";
+@import "partials/sidebar.scss";
+@import "partials/home.scss";
+@import "partials/piechart.scss";
+@import "partials/card.scss";
+@import "partials/topBar.scss";
+@import "partials/statistics.scss";
+@import "partials/web_tabs.scss";
+@import "partials/forms.scss";
+@import "partials/ag-grid.scss";
+@import "partials/icons.scss";
+@import "partials/AdvancedSquareCard.scss";
+@import "partials/connectorFlow.scss";
+@import "partials/multiselect.scss";
+@import "partials/logs_modal.scss";
+
+#root {
+  height: 100%;
+}
+
+.w-screen {
+  overflow: auto;
+}
+
+.up {
+  transition: all 0.2s;
+  transform: rotateZ(180deg);
+}
+
+.down {
+  transition: all 0.2s;
+  transform: rotateZ(0);
+}
+
+.helper {
+  &_error {
+    color: #ff1744 !important;
+    margin-left: -14px !important;
+  }
+}
+
+.hIqhee {
+  display: none !important;
+}
+
+.tracker {
+  &_limit {
+    height: 400px;
+  }
+}
+
+.reqd {
+  &_field {
+    color: $primary-red;
+  }
+}
+
+.MuiCheckbox-root {
+  padding: 0;
+  margin-right: 9px;
+}
+
+.MuiTypography-root {
+  font-size: 14px;
+}

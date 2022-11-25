@@ -1,0 +1,27 @@
+
+.toggle_checked{
+    background: #F4263E;
+    color: #fff;
+    /* transition: 0.6s ease; */
+    padding: 8px 14.5px;
+    height: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+.toggle_unchecked:hover{
+    background-color: #e8e8e8;
+}
+.toggle_unchecked{
+    background: #F1F3F7;
+    color: rgba(68, 68, 68, 0.5);
+    border: 1px solid #E8E8E8;
+    /* transition: 0.6s ease; */
+    padding: 7px 12px;
+    height: 32px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 0.875rem;
+    cursor: pointer;
+}

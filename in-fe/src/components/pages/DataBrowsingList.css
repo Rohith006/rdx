@@ -1,0 +1,12 @@
+.DataBrowsingList {
+  display: flex;
+  flex-direction: column;
+}
+
+.DataBrowsingList > .Chart {
+  height: 200px;
+}
+
+.DataBrowsingList > .Data {
+  margin-top: 100px;
+}

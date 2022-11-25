@@ -1,0 +1,107 @@
+.subheading_cover {
+  @include flexbox();
+  @include align-items(center);
+  @include xxs {
+    @include flex-wrap(wrap);
+  }
+}
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+.top_cover {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  .card {
+    color: #222;
+    @include media(
+      (
+        width: (
+          xxs: 100%,
+          md: 49.71%,
+        ),
+        margin-right: (
+          xxs: 0,
+          md: 0.5%,
+        ),
+        margin-bottom: (
+          xxs: 5%,
+          md: 0.5%,
+        ),
+      )
+    );
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+  .more_btn {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.23;
+    color: $bright-blue;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  .top_caps {
+    .card_header {
+      padding: 17px 20px;
+    }
+  }
+}
+
+.traffic_stat {
+  @include media(
+    (
+      display: (
+        xxs: none,
+        md: block,
+      ),
+    )
+  );
+}
+
+.inline-dropdown {
+  @include flexbox();
+}
+
+.linechartcontroller{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.controllerelement{
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  border: solid black 1px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 2px;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.elementlegend{
+  width:8px;
+  height:8px;
+  border:solid black 1px;
+  align-self:center;
+  margin:2px;
+}

@@ -1,0 +1,130 @@
+.logs_modal {
+    @include absolute-center();
+    background-color: $white;
+    border-radius: 5px;
+    overflow-y: scroll;
+    z-index: 10000;
+    .table {
+      &-fill {
+        width: 100%;
+      }
+      &-header {
+        width: 200px;
+        font-weight: 600;
+        padding: 15px 0;
+        color: #222222;
+        font-size: 14px;
+        &:first-child {
+          padding-left: 24px;
+        }
+        &.inner {
+          padding-left: 48px;
+        }
+      }
+      &-common {
+        padding: 15px 24px;
+        &.center {
+          padding: 15px 0;
+          padding-left: 6%;
+        }
+      }
+      &-row {
+        border-top: 1px solid #E8E8E8;
+      }
+      &-content {
+        padding: 15px 0;
+        font-size: 14px;
+        &_inner {
+          padding: 0 48px;
+        }
+        &:first-child {
+          padding-left: 24px;
+        }
+        &.activation {
+          text-transform: lowercase;
+          &::first-letter {
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    .close-btn, .close-btn2 {
+      color: $warm-grey;
+      cursor: pointer;
+      &:hover {
+        color: $greyish-brown;
+      }
+    }
+    .close-btn2 {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  }
+  
+  th, td {
+    line-height: 1.5;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .right {
+    transition: all 0.2s;
+    transform: rotateZ(90deg);
+  }
+  
+  .modal_width {
+    width: 85%;
+  }
+.ReactModal__Body--open {
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+    .modal-container__header {
+      @include flexbox();
+      @include justify-content(space-between);
+    }
+}
+
+.progress-bar {
+  overflow: hidden;
+  background-color: #28ae67;
+  box-shadow: none;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  margin-left: 0;
+  margin-right: 0;
+  -webkit-transition: width 1s linear;
+  -moz-transition: width 1s linear;
+  -ms-transition: width 1s linear;
+  transition: width 1s linear;
+  //&:after {
+  //  -webkit-animation: progress_bar 0.8s linear infinite;
+  //  -moz-animation: progress_bar 0.8s linear infinite;
+  //  -ms-animation: progress_bar 0.8s linear infinite;
+  //  -o-animation: progress_bar 0.8s linear infinite;
+  //  animation: progress_bar 0.8s linear infinite;
+  //
+  //  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  //  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  //  background-image: linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  //  -webkit-background-size: 40px 40px;
+  //  background-size: 40px 40px;
+  //  position: absolute;
+  //  content: '';
+  //  top: 0;
+  //  left: 0;
+  //  width: 100%;
+  //  height: 100%;
+  //}
+}
+  

@@ -1,0 +1,99 @@
+.NodeDetails {
+    height: 100%;
+    display: flex;
+}
+
+.NodeDetails > .NodeDetailsIcons {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    padding: 4px;
+}
+
+.NodeDetails > .NodeDetailsContent {
+    border-left: solid 1px #cccccc;
+    width: 100%;
+}
+
+.NodeDetails > .NodeDetailsContent > .Title {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    justify-content: space-between;
+    padding: 10px;
+    color: #444;
+    background-color: whitesmoke;
+    height: 62px;
+    border-bottom: solid 1px #ccc;
+}
+
+.NodeDetails > .NodeDetailsContent > .Title:hover {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.28);
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.28);
+}
+
+.NodeDetails > .NodeDetailsContent > .Title> SPAN {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 10px;
+}
+
+.NodeDetails > .NodeDetailsContent .TaskDetails {
+    position: absolute;
+    height: 300px;
+    width: 100%;
+    bottom: 0;
+    z-index: 9;
+    display: none;
+    flex-direction: row;
+}
+
+.NodeDetails > .NodeDetailsContent > .Pane {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5px;
+    height: calc(100% - 70px);
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.NodeDetails > .NodeDetailsContent > .Pane .SubTitle {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #000;
+    background-color: #ddd;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+
+.NodeDetails > .NodeDetailsContent > .Pane TABLE {
+    width: 100%;
+    border: solid 1px #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.NodeDetails > .NodeDetailsContent > .Pane TD:first-child {
+    border-right: solid 1px #ccc;
+    background-color: #f5f5f5;
+}
+
+.NodeDetails > .NodeDetailsContent > .Pane TD {
+    padding: 7px 15px;
+}
+
+.NodeDetails > .NodeDetailsContent > .Pane .InfoBox {
+    padding: 15px 5px;
+    font-size: 120%;
+}
+
+.NodeDetails > .NodeDetailsContent > .Pane TR {
+    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+}

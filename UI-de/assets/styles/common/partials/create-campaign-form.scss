@@ -1,0 +1,437 @@
+.create-campaign-page {
+  .form-group {
+    margin-bottom: 30px;
+    @include flexbox();
+    @include align-items(center);
+    @include flex-wrap(wrap);
+
+    &.nowrap {
+      @include flex-wrap(nowrap);
+    }
+    .cap {
+      .form__text-field__name {
+        margin: 0;
+      }
+    }
+    .form__text-field {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+    .macros-group {
+      margin-top: 15px;
+      font-size: 0.96667em;
+      font-weight: 600;
+      color: $greyish-black;
+      margin-top: 4px;
+      // margin-left: 10px;
+      // background-color: rgba(68, 68, 68, 0.1);
+      // border-radius:4px;
+
+      .macros_sub {
+        margin-top: 14px;
+      }
+
+      .link {
+        margin-left: 5px;
+        text-transform: uppercase;
+        border: none;
+        margin-top: 8px;
+        font-weight: 500;
+        box-shadow: none;
+        font-size: 12px;
+        background: rgba(68, 68, 68, 0.1);
+        border-radius: 4px;
+        padding: 0 8px;
+        &:hover {
+          color: $bright-blue;
+        }
+      }
+    }
+
+    &_col {
+      @include media(
+        (
+          width: (
+            xxs: 100%,
+            lg: 49%,
+          ),
+          margin-right: (
+            xxs: 0,
+            lg: 2%,
+          ),
+        )
+      );
+
+      &:last-child {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    &_row {
+      .dropdown {
+        width: 100%;
+        max-width: 100%;
+
+        &_cover {
+          width: 49%;
+          @include media(
+            (
+              width: (
+                xxs: 100%,
+                lg: 49%,
+              ),
+            )
+          );
+          //margin-right: 2%;
+          //&:last-child {
+          //  margin-right: 0;
+          //}
+        }
+      }
+    }
+
+    .nativeAd_container {
+      margin-top: 11px;
+      background: #f8f9fb;
+      border: 1px dashed $cancel-button;
+      box-sizing: border-box;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: max-content;
+      // padding: 72px 0 60px 0;
+    }
+    .videoAd_container {
+      margin-top: 11px;
+      background: #f8f9fb;
+      border: 1px dashed $cancel-button;
+      box-sizing: border-box;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .form-group1 {
+    .macros-group {
+      font-size: em(13);
+      color: $greyish-black;
+      margin-top: -24px;
+      margin-bottom: 18px;
+      // margin-left: 10px;
+      // background-color: rgba(68, 68, 68, 0.1);
+      // border-radius:4px;
+
+      .macros_sub {
+        margin-top: 14px;
+      }
+
+      .link {
+        margin-left: 5px;
+        text-transform: uppercase;
+        border: none;
+        margin-top: 8px;
+        font-weight: 500;
+        box-shadow: none;
+        font-size: 12px;
+        background: rgba(68, 68, 68, 0.1);
+        border-radius: 4px;
+        padding: 0 8px;
+        &:hover {
+          color: $white;
+          background: $greyish-black;
+        }
+      }
+    }
+
+    &_col {
+      @include media(
+        (
+          width: (
+            xxs: 100%,
+            lg: 49%,
+          ),
+          margin-right: (
+            xxs: 0,
+            lg: 2%,
+          ),
+        )
+      );
+
+      &:last-child {
+        margin-right: 0;
+        width: 100%;
+      }
+    }
+
+    &_row {
+      .dropdown {
+        width: 100%;
+        max-width: 100%;
+
+        &_cover {
+          width: 49%;
+          @include media(
+            (
+              width: (
+                xxs: 100%,
+                lg: 49%,
+              ),
+            )
+          );
+          //margin-right: 2%;
+          //&:last-child {
+          //  margin-right: 0;
+          //}
+        }
+      }
+    }
+    &_row1 {
+      .dropdown {
+        width: 97%;
+        max-width: 100%;
+
+        &_cover {
+          width: 49%;
+          @include media(
+            (
+              width: (
+                xxs: 100%,
+                lg: 49%,
+              ),
+            )
+          );
+          //margin-right: 2%;
+          //&:last-child {
+          //  margin-right: 0;
+          //}
+        }
+      }
+    }
+  }
+
+  .upload {
+    @include flexbox();
+    @include align-items(center);
+    // margin: 20px 0 38px;
+    // margin-top: 20px;
+    // margin-bottom: 35px;
+    // margin-left: 15rem;
+    justify-content: center;
+    padding: 4.5rem;
+    .btn {
+      // margin-right: 16px;
+      align-items: center;
+      // width: 10rem;
+      height: 48px;
+      justify-content: center;
+    }
+
+    .subtext {
+      font-size: em(11);
+      line-height: 1.64;
+      color: $warm-grey;
+      max-width: 440px;
+      display: inline-block;
+    }
+    &_file {
+      display: flex;
+      margin-top: 10px;
+      align-items: center;
+      background: $body-color;
+      justify-content: center;
+      width: 675px;
+      height: 200px;
+      border-radius: 8px;
+      border: 1px dashed $cancel-button;
+      @include media(
+        (
+          width: (
+            xxs: 200px,
+            lg: 675px,
+            s: 300px,
+          ),
+          height: (
+            xxs: 100px,
+            s: 150px,
+            lg: 200px,
+          ),
+          margin-right: (
+            xxs: 0,
+            lg: 10px,
+          ),
+          margin-bottom: (
+            xxs: 10px,
+            lg: 0,
+          ),
+        )
+      );
+    }
+  }
+
+  .btn-cover {
+    @include flexbox();
+    margin-top: 30px;
+    @include justify-content(center);
+    &_campaigns {
+      @include flexbox();
+      @include justify-content(center);
+      margin-top: 230px;
+    }
+  }
+}
+.btn-cover {
+  @include flexbox();
+  margin-top: 30px;
+  @include justify-content(center);
+  &_campaigns {
+    @include flexbox();
+    @include justify-content(center);
+    margin-top: 230px;
+    padding-bottom: 72px;
+  }
+}
+
+.form-group-tracking {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-group-reports {
+  display: flex;
+  .form-group_label {
+    width: 100px;
+    margin-right: 40px;
+  }
+}
+.form-group-item {
+  width: 18%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+
+  input {
+    font-weight: 400;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 0;
+    -webkit-box-shadow: inset 0 0 0 1px #e3e4e6;
+    box-shadow: inset 0 0 0 1px #e3e4e6;
+    padding: 0 8px;
+    min-height: 34px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    line-height: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    -webkit-transition: -webkit-box-shadow 0.2s;
+    transition: -webkit-box-shadow 0.2s;
+    transition: box-shadow 0.2s;
+    transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  }
+}
+
+.app-description {
+  @include flexbox();
+  flex-wrap: wrap;
+  font-family: $font-family;
+
+  &__head {
+    width: 100%;
+    @include flexbox();
+
+    &__img {
+      img {
+        width: 60px;
+      }
+    }
+
+    &__name {
+      &__title {
+        color: #444;
+        font-weight: bold;
+        font-size: em(16);
+      }
+      .__app-image {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__body {
+    max-height: 60px;
+    line-height: 1.4em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 10px;
+    width: 100%;
+    font-size: em(14);
+    color: #8d8e8f;
+  }
+
+  &__delete-app-link {
+    color: $highlight-color;
+    font-size: em(14);
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.inputfile + label svg {
+  width: 4em;
+  height: 1.5em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+
+.inputfile-2 + label {
+  color: $highlight-color;
+  border: 2px solid currentColor;
+}
+.native-ads-creatives {
+  .common-link-rating {
+    padding-top: 24px;
+  }
+}
+
+.budget_subtitles {
+  font-size: 12px;
+  font-weight: 500;
+  color: $greyish-black;
+}

@@ -1,0 +1,52 @@
+.status {
+  font-size: em(10);
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: $white;
+  //height: 20px;
+  //margin-bottom: 5px;
+  //display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 3px 5px 3px 6px;
+  border-radius: 4px;
+  &.active {
+    background-color: $greenish-teal;
+  }
+  &.new,
+  &.success,
+  &.approved{
+    background-color: $greenish-teal;
+  }
+  
+  &.paused {
+    background-color: $macaroni-and-cheese;
+  }
+  &.suspended {
+    background-color: red;
+  }
+  &.rejected {
+    background-color: $grapefruit;
+  }
+  &.failed {
+    background-color: $grapefruit;
+  }
+  &.banned {
+    background-color: $lavender-pink;
+  }
+  &.pending {
+    background-color: $macaroni-and-cheese;
+  }
+  &.disabled ,
+  &.invalid{
+    background-color: $warm-grey;
+  }
+  &.removed {
+    background-color: $dark-gray;
+  }
+  &-cover{
+    @include flexbox();
+    @include flex-direction(column);
+    width: 100%;
+  }
+}

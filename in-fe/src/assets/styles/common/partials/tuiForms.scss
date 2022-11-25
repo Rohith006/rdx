@@ -1,0 +1,52 @@
+FORM.TuiForm {
+  & > h1 {
+    font-size: 150%;
+    font-weight: 400;
+    margin: 15px 10px;
+    text-transform: uppercase;
+    color: #444;
+  }
+  & > .TuiFormGroup {
+    & > .TuiFormGroupHeader {
+      background-color: whitesmoke;
+      border-radius: 5px 5px 0 0;
+      & > h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #444;
+        text-transform: none;
+      }
+      & > p {
+        font-size: 14px;
+        color: #444;
+        text-transform: none;
+      }
+    }
+    & > SECTION.TuiFormGroupContent {
+      & .container {
+        padding: 24px;
+        width: 100%;
+        & p {
+          padding: 12px 0;
+        }
+      }
+      & p {
+        color: #555;
+      }
+      & > h3 {
+        font-size: 1.3em;
+        margin: 15px 0 10px 0;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  & DIV.TuiFormError {
+    background-color: #d81b60;
+    color: white;
+    padding: 6px;
+    display: flex;
+    align-items: center;
+  }
+}

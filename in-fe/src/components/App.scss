@@ -1,0 +1,150 @@
+.FlexColumns {
+  display: flex;
+  flex-direction: column;
+}
+.FlexRows {
+  display: flex;
+  flex-direction: row;
+  width: inherit;
+}
+
+.Box10 {
+  margin: 10px;
+  padding: 10px;
+}
+
+.Relative {
+  position: relative;
+}
+
+.ScrollablePaper {
+  width: inherit;
+  height: 100%;
+  overflow: auto;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.Pad10 {
+  padding: 10px;
+}
+
+.AlertTag {
+  padding: 5px 8px;
+  background-color: #ef6c00;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.OKTag {
+  padding: 5px 8px;
+  background-color: #43a047;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.NormalTag {
+  padding: 5px 8px;
+  background-color: #1565c0;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+.Elevate {
+  border-radius: 15px;
+  -webkit-box-shadow: 0 0 10px -1px rgba(176, 176, 176, 1);
+  -moz-box-shadow: 0 0 10px -1px rgba(176, 176, 176, 1);
+  box-shadow: 0 0 10px -1px rgba(176, 176, 176, 1);
+  padding: 0 25px 25px 20px;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.Bottom10 {
+  margin-bottom: 10px;
+}
+
+.Bottom20 {
+  margin-bottom: 20px;
+}
+
+.MoveUpOpacity {
+  animation-name: moveUpAndOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.3s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes moveUpAndOpacity {
+  0% {
+    opacity: 0.3;
+    transform: translateY(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes moveLeftAndOpacity {
+  0% {
+    opacity: 0.1;
+    transform: translateX(5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+FIELDSET {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #cccccc;
+  border-width: 1px;
+}
+
+FIELDSET LEGEND {
+  color: #999;
+  font-size: 11px;
+}
+
+.loader {
+  &_cover {
+    height: 100vh;
+    background-color: #fafafa;
+  }
+  &_basic {
+    transition: all 0.3s ease;
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+}

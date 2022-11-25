@@ -1,0 +1,110 @@
+.accordion {
+  border: none;
+  &__item {
+    margin-bottom: 10px;
+    background-color: $white;
+    .card_body {
+      @include flexbox();
+      @include justify-content(space-between);
+      @include xxs {
+        @include flex-wrap(wrap);
+      }
+      @include lg {
+        @include flex-wrap(nowrap);
+      }
+      margin: 32px 20px 0;
+      padding: 5px 15px;
+      &-item {
+        @include media(
+          (
+            width: (
+              xxs: 100%,
+              lg: 48%,
+            ),
+          )
+        );
+        &-creative {
+          @include media(
+            (
+              width: (
+                xxs: 100%,
+                lg: 48%,
+              ),
+              background: #f8f9fb,
+              border: 1.5px dashed $cancel-button,
+              box-sizing: border-box,
+              border-radius: 8px,
+            )
+          );
+        }
+      }
+    }
+  }
+  &__panel {
+    padding: 0;
+  }
+  &__button {
+    background-color: $white;
+    padding: 0;
+    position: relative;
+    &:hover {
+      background-color: $white;
+    }
+    .card_header {
+      width: 100%;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+    }
+    .subheading {
+      font-size: em(21);
+      font-weight: 500;
+      color: $black;
+    }
+    &:before {
+      display: none;
+    }
+    .icon {
+      position: relative;
+      width: 26px;
+      height: 26px;
+      border-radius: 14px;
+      border: solid 1px #e2e2e2;
+      display: inline-block;
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: $warm-grey;
+        transition: transform 300ms cubic-bezier(0.4, 0, 0.4, 1);
+      }
+      &:before {
+        top: 25%;
+        left: 50%;
+        width: 2px;
+        height: 50%;
+        margin-left: -1px;
+      }
+      &:after {
+        top: 50%;
+        left: 25%;
+        width: 50%;
+        height: 2px;
+        margin-top: -1px;
+      }
+    }
+    &[aria-expanded='true'] {
+      .icon {
+        &:before {
+          transform: rotate(270deg);
+        }
+        &:after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+.accordion__button {
+  position: static;
+}

@@ -1,0 +1,9 @@
+.DebugBox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.DebugBox .DebugTabs {
+    border-radius: 7px 7px 0 0;
+}

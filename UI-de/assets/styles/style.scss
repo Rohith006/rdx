@@ -1,0 +1,199 @@
+@import "../../node_modules/normalize.scss/normalize.scss";
+// @import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;600;700;800&display=swap");
+
+//mixin
+@import "mixin_functions/mixin/mixin";
+@import "mixin_functions/mixin/flexbox-mixin";
+@import "mixin_functions/mixin/media-functions";
+@import "mixin_functions/ui-variables";
+// colors
+@import "mixin_functions/colors/color-palettes";
+@import "mixin_functions/colors/color-function";
+@import "mixin_functions/colors/contrast-color";
+@import "mixin_functions/colors/contrast-function";
+//common
+@import "common/index";
+//light
+@import "./themes/light/index";
+@import "./fontawesome/scss/fontawesome.scss";
+@import "./fontawesome/scss/solid.scss";
+@import "./fontawesome/scss/brands.scss";
+
+// Importing custom theme
+@import "./custom/custom-theme.scss";
+
+.eCPM {
+  text-transform: none !important;
+}
+.tooltip-inventory {
+  .tooltiptext {
+    visibility: hidden;
+    text-transform: none;
+    width: max-content;
+    white-space: pre-line;
+    background-color: black;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.64;
+    letter-spacing: normal;
+    color: #ffffff;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 2px;
+    top: -140%;
+    left: 140%;
+    position: absolute;
+    z-index: 99999;
+  }
+  .tooltiptext:hover {
+    background: red;
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    background: red;
+  }
+}
+
+.tooltip-inventory:hover .tooltiptext {
+  .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    background: red !important;
+  }
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: $primary-color;
+}
+
+a {
+  color: $bright-blue;
+  text-decoration: none;
+}
+
+.s-example {
+  align-items: flex-end;
+  margin-left: 12px;
+  justify-content: center;
+
+  span {
+    margin: 0;
+    height: 42px;
+    padding-top: 15px !important;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+.icon_cover {
+  display: inline-flex;
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.editor-control {
+  cursor: pointer;
+  color: $warm-grey;
+  width: 17px;
+  height: 17px;
+  margin: 3px 0 0 1em;
+
+  svg {
+    width: inherit;
+    height: inherit;
+    fill: $warm-grey;
+
+    &:hover {
+      fill: $dark;
+    }
+  }
+}
+
+.editor-control2 {
+  cursor: pointer;
+  color: $warm-grey;
+  width: 17px;
+  height: 17px;
+  margin: 3px 0 0 1em;
+  svg {
+    width: inherit;
+    height: inherit;
+    fill: $warm-grey;
+    &:hover {
+      fill: $bright-blue;
+    }
+  }
+}
+
+.editor-control + .editor-control {
+  margin-left: 5px;
+}
+
+.chart-tooltip {
+  font: inherit;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: white;
+  padding: 3px;
+}
+
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 125px;
+  background-color: #91c269;
+  border-radius: 10px;
+  height: 8px;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #000;
+  box-shadow: inset 0 0 3px #ccc;
+
+  &__info {
+    position: relative;
+    color: #000;
+    font-size: em(10);
+    z-index: $progress-bar;
+  }
+
+  &__bar {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $greenish-teal;
+    border-radius: 4px;
+  }
+}
+
+.ReactModal__Content--after-open {
+  margin: 0;
+  border-radius: 10px !important;
+  overflow: hidden;
+  width: 91%;
+}
+
+.TC_button_container {
+  text-align: center;
+  padding-top: 5px;
+  margin-top: 10px;
+}
+
+.apply {
+  margin-left: 10px;
+  margin-right: 117px;
+}

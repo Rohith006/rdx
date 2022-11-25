@@ -1,0 +1,131 @@
+.sidebar {
+  border-right: 1px solid $white-three;
+  min-width: 104px;
+  background-color: #2C3550;
+  position: sticky;
+  top: 57px;
+  height: calc(100vh - 57px);
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &-admin {
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    border-right: 1px solid $white-three;
+    min-width: 104px;
+    background-color: #2C3550;
+    position: sticky;
+    top: 57px;
+    height: calc(100vh - 57px);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .admin_nav {
+      height: 100px;
+      cursor: pointer;
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
+      .icon {
+        display: block;
+        width: 30px;
+        path {
+          fill: #FFFFFF;
+          fill-opacity: 0.5;
+        }
+      }
+      & .sidebar_nav-link_text {
+        display: block;
+        text-align: center;
+        &.admin {
+          width: 80px;
+        }
+      }
+      &:hover {
+        .icon {
+          path {
+            fill: $greenish-teal;
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &_nav {
+    &-link {
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      @include justify-content(center);
+      height: 4rem;
+      width: 100%;
+      .icon {
+        display: block;
+        width: 20px;
+      }
+      &_text {
+        color: #FFFFFF;
+        opacity: 0.5;
+        font-size: 14px;
+      }
+      &:hover {
+        background-color: #3C4665;
+        & > .icon {
+          path, rect {
+            fill: #FFFFFF;
+            fill-opacity: 1;
+          }
+        }
+        & .sidebar_nav-link_text {
+          opacity: 1;
+        }
+      }
+      &.active {
+        background-color: #3C4665;
+        border-left: 4px solid $grapefruit;
+        & > .icon {
+          path, rect {
+            fill: #FFFFFF;
+            fill-opacity: 1;
+          }
+        }
+        & .sidebar_nav-link_text {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+// .tooltip {
+//   z-index: 99;
+//   .tooltiptext {
+//     top: -10%;
+//     left: 400%;
+//     // padding: 5px 10px;
+//     width: 85px;
+//     margin-left: -42.5px;
+//     text-align: center;
+//     opacity: 1;
+//   }
+//   & .tooltiptext {
+//     &::after {
+//       content: " ";
+//       position: absolute;
+//       top: 13px;
+//       // left: 42%;
+//       transform: rotate(0deg);
+//       border-width: 5px;
+//       border-style: solid;
+//       border-color: transparent black transparent transparent;
+//     }
+//   }
+//   &:hover .tooltiptext {
+//     visibility: visible;
+//     opacity: 1;
+//   }
+// }

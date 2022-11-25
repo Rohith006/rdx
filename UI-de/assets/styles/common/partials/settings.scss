@@ -1,0 +1,276 @@
+.grid {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  //@include xxs{
+  //  @include flex-wrap(wrap);
+  //}
+  //@include lg{
+  //  @include flex-wrap(nowrap);
+  //}
+  &_item {
+    &-col {
+      @include flexbox();
+      @include flex-wrap(wrap);
+      @include media(
+        (
+          width: (
+            xxs: 100%,
+            lg: 50%,
+          ),
+          margin-right: (
+            xxs: 0,
+            lg: 10px,
+          ),
+        )
+      );
+      &:last-child {
+        margin-right: 0;
+      }
+      .card {
+        width: 100%;
+      }
+      .select_pub {
+        @include flexbox();
+        @include flex-wrap(nowrap);
+        @include align-items(flex-end);
+        @include xxs {
+          @include flex-wrap(wrap);
+        }
+        @include lg {
+          @include flex-wrap(nowrap);
+        }
+        .select {
+          @include media(
+            (
+              width: (
+                xxs: 100%,
+                lg: 70%,
+              ),
+              margin-right: (
+                xxs: 0px,
+                lg: 10px,
+              ),
+            )
+          );
+        }
+      }
+      .title {
+        font-size: em(17);
+        font-weight: normal;
+        letter-spacing: normal;
+        color: $dark;
+        margin-bottom: 20px;
+      }
+    }
+    &-row {
+      @include flexbox();
+      @include xxs {
+        @include flex-wrap(wrap);
+      }
+      @include lg {
+        @include flex-wrap(nowrap);
+      }
+      width: 100%;
+    }
+  }
+}
+.camp-whitelist {
+  align-items: flex-start !important;
+  .whitelist-btn {
+    display: flex;
+    margin-top: 15px;
+
+    align-items: flex-end;
+  }
+}
+.disabled-block {
+  position: relative;
+  &.disabled {
+    pointer-events: none;
+  }
+  &_cover {
+    &.active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999;
+      pointer-events: none;
+    }
+  }
+}
+
+.field {
+  @include flexbox();
+  @include justify-content(space-between);
+  @include align-items(center);
+  @include xxs {
+    @include flex-wrap(wrap);
+  }
+  @include lg {
+    @include flex-wrap(nowrap);
+  }
+  &_item {
+    @include flexbox();
+    //@include align-items(center);
+    @include xxs {
+      @include flex-wrap(wrap);
+    }
+    @include lg {
+      @include flex-wrap(nowrap);
+    }
+    .title {
+      font-size: em(13);
+      color: $greyish-brown;
+      display: inline-block;
+      margin-right: 20px;
+      @include media(
+        (
+          display: (
+            xxs: block,
+            lg: inline-block,
+          ),
+          width: (
+            xxs: 100%,
+            lg: initial,
+          ),
+          margin-bottom: (
+            xxs: 15px,
+            lg: 0,
+          ),
+        )
+      );
+      &.mb2 {
+        @include media(
+          (
+            margin-bottom: (
+              xxs: 15px,
+              lg: 15px,
+            ),
+          )
+        );
+      }
+    }
+  }
+  .subtext {
+    font-size: em(13);
+    color: $greyish-brown;
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+.block {
+  margin-right: 10px;
+  margin-bottom: 0;
+  @include media(
+    (
+      margin-bottom: (
+        xxs: 15px,
+        lg: 0,
+      ),
+    )
+  );
+  .percent {
+    position: relative;
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+      content: "\f295";
+      color: $warm-grey;
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+    }
+  }
+  .text-input__select {
+    min-width: 190px;
+  }
+}
+
+.input-lg {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 20px;
+}
+.settingsDivFlex {
+  display: flex;
+  justify-content: space-between;
+  &.filter {
+    padding: 20px 32px;
+  }
+}
+
+// .settingsTabs {
+//   padding-left: 3.4em;
+//   padding-right: 3.4eml
+// }
+
+.settingsLine {
+  border-top: 1px solid rgba(68, 68, 68, 0.3);
+  border-bottom: none;
+}
+
+.settingsFilter {
+  width: 45%;
+  margin-top: 0.8em;
+}
+.settingsFormRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.6em;
+  width: 100%;
+}
+
+.settingsFormField {
+  width: 50%;
+}
+
+.settingsType {
+  width: 50%;
+  height: 2.67em;
+  padding-right: 1.5%;
+  margin-bottom: 3em;
+}
+.settingsUpload {
+  width: 50%;
+  height: 12em;
+  margin-bottom: 1.6em;
+}
+.settingsBtn {
+  margin-top: 11.33em;
+  margin-bottom: -1.33em;
+}
+.settingsSaveBtn {
+  height: 2.67em;
+  width: 6.8em;
+  padding: 0.67em;
+}
+
+.settingsUploadCSV {
+  background: #f8f9fb;
+  border: 1px solid #3e66fb;
+  border-style: dashed;
+  border-radius: 8px;
+  height: 12em;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.67em;
+}
+.settingsDivCenter {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.settingsSubid {
+  min-height: 5.33em;
+  min-width: 100%;
+  margin-top: 0.8em;
+  margin-bottom: 1.6em;
+  padding-top: 2.2em;
+}

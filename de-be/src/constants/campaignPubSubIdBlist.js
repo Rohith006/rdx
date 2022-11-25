@@ -1,0 +1,9 @@
+export const WHITELIST = 'WHITELIST';
+export const BLACKLIST = 'BLACKLIST';
+
+export const LOW_PERFORMANCE = 'LOW_PERFORMANCE';
+export const KPI_NOT_REACHED = 'KPI_NOT_REACHED';
+export const LOW_RR = 'LOW_RR';
+export const ZERO_PERFORMANCE = 'ZERO_PERFORMANCE';
+export const FRAUD = 'FRAUD';
+export const NOT_PASSED_CLICK_CAP_RULE ='NOT PASSED CLICK CAP RULE';

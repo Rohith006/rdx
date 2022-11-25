@@ -1,0 +1,90 @@
+.css-vj8t7z {
+  min-height: 40px !important;
+  height: 40px;
+  border-radius: 4px !important;
+  border: 1px solid $white-three;
+}
+
+.css-d8oujb {
+  display: none !important;
+}
+
+.css-1ep9fjw,
+.css-1uq0kb5 {
+  .css-19bqh2r {
+    display: none !important;
+  }
+  position: relative;
+  width: 40px;
+  &:before {
+    content: "\f0dd";
+    @include absolute-center();
+    @extend %fa-icon;
+    @extend .fas;
+    color: $black;
+    height: 18px;
+  }
+}
+
+.css-2o5izw {
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid $white-three;
+  box-shadow: none !important;
+}
+
+.css-15k3avv,
+.css-26l3qy-menu {
+  z-index: 999 !important;
+  .css-11unzgr {
+    z-index: 999;
+  }
+}
+
+.css-1hwfws3,
+.css-1g6gooi,
+.css-g1d714-ValueContainer {
+  max-height: 78px;
+  overflow-y: auto !important;
+}
+.css-1hwfws3 > div, .css-g1d714-ValueContainer > div {
+  width: max-content !important;
+}
+
+.width {
+  width: 17%;
+}
+.css-1g6gooi {
+  input {
+    height: initial;
+  }
+}
+
+.react-select-group {
+  font-size: em(18);
+  color: initial;
+  border: 1px solid $white-three;
+}
+
+.country-select {
+  .css-vj8t7z,
+  .css-2o5izw {
+    height: initial !important;
+    max-height: initial;
+    // border: 1px solid $white-three;
+  }
+}
+.filter-form__select {
+  .css-yk16xz-control {
+    min-height: 40px;
+    border: 1px solid $white-three;
+    border-radius: 4px;
+    &:focus {
+      outline: black;
+    }
+  }
+}
+
+.css-yk16xz-control {
+  border: 1px solid #E8E8E8 !important;
+}

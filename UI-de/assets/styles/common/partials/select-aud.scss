@@ -1,0 +1,211 @@
+.audience_select{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.segment-container {
+    width: 40%;
+    margin-left: 1.5rem;
+    height: 10rem;
+    margin-top: 2rem;
+}
+.mysegments {
+    border: 1px solid $white-three;
+    display: flex;
+    justify-content: flex-end;
+    height: 4rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    background: $table-header;
+    border-radius: 4px;
+}
+
+.segment_name{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    font-size: 16px;
+}
+.segment_name{
+    font-weight: 500; 
+}
+.segment_toggle{
+    margin-left: 7px;
+}
+.segment-btn{
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: 1px solid $white-three;
+    border-image: initial;
+    width: 15%;
+    display: grid;
+    place-items: center;
+    margin: -1px;
+    background: $white-three;
+    border-radius: 0px 4px 4px 0px
+}
+.audience-display{
+    display: flex;
+    align-items: center;
+    max-height: 300px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border: 1px solid $white-three;
+    justify-content: center;
+    overflow: auto;
+
+    margin-top: 2rem;
+    width: 61%;
+    background: $white;
+    border-radius: 4px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .camp_name{
+            font-weight: 700;
+            margin-top: 4%;
+        }
+        .group{
+            position: relative;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            &:before {
+                position: absolute;
+                left: 5px;
+                width: 15px;
+                height: 1px;
+                margin-top: 10px;
+                content: '';
+                background-color: #e8e8e8;
+            }
+              
+              &:after {
+                position: absolute;
+                top: 0px;
+                bottom: 0;
+                left: 5px;
+                width: 1px;
+                height: 100%;
+                content: '';
+                background-color: #E8E8E8;
+              }
+
+              &:last-child {
+                padding-bottom: 20px;
+              }
+              
+              &:last-child:after {
+                height: 90%;
+              }
+              &:last-child:before {
+                position: absolute;
+                top: 15px;
+                left: 5px;
+                width: 15px;
+                height: 1px;
+                margin-top: 0px;
+                content: '';
+                background-color: #e8e8e8;
+              }
+        }
+    }
+}
+.segment_click{
+    width: 24px;
+    height: 24px;
+    border: 2px solid #cccccc;
+    border-radius: 4px;
+}
+.segment_icon{
+    padding: 3px;
+}
+
+.subheading_cove{
+    &_close{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+    .heading{
+        font-weight: 600;
+    }
+}
+.aud_modal{
+    height: 89%;
+}
+.right_container{
+    height: 89%;
+}
+.modal_box_container{
+    width: 100%;
+     height: 100%;
+}
+.Btn_Container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12;
+    color: $cancel-button;
+    margin-right: 16;
+    width: '115px';
+    height: '40px';
+    border-radius: '4px';
+    text-transform: 'uppercase';
+    border: '1px solid #444444';
+    background: 'transparent';
+    padding-bottom: 72px;
+    margin-top: 11rem;
+    :after {
+        content : "";
+        margin-top: 5rem
+    }
+}
+
+.pagination_container1 {
+    display: flex;
+    justify-content: space-between;
+    height: 12%;
+    align-items: center;
+    margin: 0 2%;
+}
+.left {
+    margin-left: 15px;
+    width: 50px
+}
+
+.pagination_buttons {
+    color: #353ED6;
+    font-size: 20px;
+    :hover{
+        color: #eec9c9
+    }
+  }
+
+.grid_slection_text{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clear_all{
+    cursor: pointer;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    width: 80px;
+}
+.groups_data_list{
+    margin-left:20px;
+}
+.check_mark{
+    margin: 0 6px 0 0;
+}
+.audience-tab_text{
+    text-align: center;
+}

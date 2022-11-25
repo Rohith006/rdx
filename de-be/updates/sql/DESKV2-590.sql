@@ -1,0 +1,1 @@
+alter table "publishers" drop column "password"

@@ -1,0 +1,273 @@
+.form {
+  &_heading {
+    @include flexbox();
+    @include align-items(center);
+    margin-right: 5px;
+    margin-bottom: 4px;
+  }
+}
+.tooltip {
+  position: relative;
+}
+.tooltip_text {
+  display: none;
+  text-transform: none;
+  width: max-content;
+  max-width: 400px;
+  white-space: pre-line;
+  background-color: black;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.64;
+  letter-spacing: normal;
+  color: $white !important;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 10px;
+  top: -140%;
+  left: 120%;
+  position: absolute;
+  z-index: 1000000;
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 20px;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
+}
+
+.tooltip_icon {
+  cursor: pointer;
+  margin-left: 5px;
+  &:hover ~ .tooltip_text {
+    display: block;
+  }
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 400;
+  color: $greyish-black;
+  line-height: 15px;
+}
+
+.chips {
+  margin-left: 16px;
+  border-radius: 8px;
+  margin-top: 12px;
+  width: max-content;
+  background-color: $white-three;
+  color: $dark-black;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  &_container {
+    margin-left: -16px;
+  }
+  &.no-mar {
+    padding: 2px 4px;
+    margin-top: 0;
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.MuiSwitch-root {
+  height: max-content;
+  padding: 0;
+}
+.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track {
+  background-color: $bright-blue;
+  opacity: 1;
+}
+.MuiSwitch-track {
+  background-color: $white-three;
+  height: 20px;
+  border-radius: 100px;
+  width: 75%;
+  opacity: 1;
+}
+.MuiSwitch-thumb {
+  background-color: $white;
+  width: 18px;
+  height: 18px;
+  margin-top: -8px;
+  margin-left: -6px;
+}
+
+.font {
+  &-semibold {
+    color: $greyish-black;
+    font-weight: 500 !important;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.property {
+  &_container {
+    margin-top: 16px;
+    margin-left: 16px;
+  }
+}
+
+.active {
+  &_chip {
+    background-color: #0bbd83;
+    color: $white;
+    font-size: 12px;
+    padding: 2px 8px;
+    width: 60px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+}
+
+.inactive {
+  &_chip {
+    background-color: $primary-red;
+    color: $white;
+    font-size: 12px;
+    padding: 2px 8px;
+    width: 70px;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+}
+
+.border {
+  &-top {
+    border-top: 1px solid $white-three;
+    margin-top: 32px;
+  }
+}
+
+.disabled {
+  &_text {
+    color: #22222280;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.copy {
+  &_to {
+    background-color: $white-three;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    &.pending {
+      color: #22222280;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    &.clicked {
+      color: #4bbd5d;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    &.active,
+    &.copied {
+      color: $greyish-black;
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.w-66 {
+  width: 56%;
+}
+
+.Top5Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 43px;
+}
+.topCountriesText {
+  font-size: 14px;
+  font-weight: 600;
+  color: $greyish-black;
+}
+.card_text {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  .flag-icon {
+    margin-right: 4px;
+    clip-path: circle(40% at 10px 7.3px);
+    z-index: 5;
+  }
+  .flag-circle {
+    margin-left: 1rem;
+  }
+}
+
+.geoHeading {
+  border-right: 3px solid $white-three;
+  padding-right: 20px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.tracker {
+  &_copy {
+    position: absolute;
+    top: -10px;
+    z-index: 9999;
+    right: 0;
+  }
+}
+
+.radio {
+  &_btn {
+    &-container {
+      display: flex;
+      align-items: center;
+      input {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      input[type="radio"]:after {
+        background-color: $bright-blue;
+      }
+
+      input[type="radio"]:checked:after {
+        background-color: $bright-blue;
+      }
+    }
+    &-items {
+      display: flex;
+      align-items: center;
+    }
+    &-label {
+      color: $greyish-black;
+      font-weight: 500;
+      font-size: 14px;
+      margin-right: 32px;
+      cursor: pointer;
+    }
+  }
+}
+
+.MuiSvgIcon-root {
+  path {
+    fill: $bright-blue;
+  }
+}

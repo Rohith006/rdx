@@ -1,0 +1,55 @@
+.CopyTraitsForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.CopyTraitsList {
+  margin: 0;
+}
+
+.Button {
+  cursor: pointer;
+}
+
+.AddButton {
+  align-self: flex-end;
+  justify-self: flex-start;
+  margin-bottom: 8px;
+  margin-left: 6px;
+}
+
+.CopyTraitsList {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+  list-style-type: none;
+  height: 220px;
+  overflow-y: auto;
+}
+
+.CopyTraitsList > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  font-size: 95%;
+}
+
+.CopyTraitsForm > FIELDSET {
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.26);
+  border-width: 1px;
+}
+
+
+.CopyTraitsForm > FIELDSET > LEGEND{
+  color: rgba(0, 0, 0, 0.54);
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.CopyTraitsForm > .CopyTraitsInput .Target {
+  display: grid;
+  grid-template-columns: 1fr 35px;
+}

@@ -1,0 +1,43 @@
+.sign-in-page {
+  .form__text-field__wrapper {
+    position: relative;
+  }
+  .form_submit-btn {
+    @include justify-content(flex-start);
+  }
+  .agreement {
+    position: absolute;
+    font-family: "Rubik", sans-serif;
+    font-size: 0.93333em;
+    line-height: 20px;
+    color: #505050;
+    width: 370px;
+    margin-bottom: 25px;
+    margin-top: -55px;
+    margin-left: 40px;
+  }
+}
+
+.update-password-container {
+  display: flex;
+  margin: 0 auto;
+  width: 1200px;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: calc(100vh - 150px);
+  left: 0;
+  right: 0;
+
+  .update-password-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 550px;
+    height: 380px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid black;
+  }
+}

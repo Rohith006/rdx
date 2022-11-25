@@ -1,0 +1,10 @@
+.agreement-page{
+  height: 100%;
+  @include flexbox();
+  @include align-items(center);
+  @include justify-content(center);
+  &__container{
+    width: 100%;
+    max-width: 900px;
+  }
+}

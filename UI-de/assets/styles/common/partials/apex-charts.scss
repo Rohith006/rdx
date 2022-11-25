@@ -1,0 +1,141 @@
+foreignOption {
+  transform: translate(10px,10px)!important;
+}
+.traffic_stat {
+  .apexcharts-legend.left .apexcharts-legend-series {
+    width: initial !important;
+    display: -webkit-box !important;
+    display: -moz-box !important;
+    display: -ms-flexbox !important;
+    display: -webkit-flex !important;
+    display: flex !important;
+  }
+  .apexcharts {
+    &-toolbar {
+      z-index: 1 ;
+    }
+    &-legend {
+      // left: 0 !important;
+      // right: auto !important;
+      border-radius: 3px;
+      // border: solid 1px #dfdfdf;
+      background-color: $white;
+      padding: 0;
+      @include align-items(center);
+      &-text {
+        font-size: 14px!important;
+        font-family: $font-family !important;
+        font-weight: 500;
+        letter-spacing: normal;
+        color: $greyish-brown !important;
+        @include media(
+          (
+            padding: (
+              md: 10px 5px 10px 5px,
+              lg: 15px 20px 15px 10px,
+            ),
+          )
+        );
+      }
+      &-marker {
+        width: 6px !important;
+        height: 6px !important;
+        @include media(
+          (
+            margin: (
+              md: 10px 0 10px 10px,
+              lg: 15px 0 15px 20px,
+            ),
+          )
+        );
+      }
+      &-series {
+        margin: 0 !important;
+        // border-right: 1px solid #dfdfdf;
+        @include flexbox();
+        @include align-items(center);
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+  .card_body {
+    padding-top: 0;
+  }
+}
+
+/* donut */
+.donut {
+  .apexcharts {
+    &-legend {
+      @include media(
+        (
+          width: (
+            xxs: 100%,
+            md: 65%,
+          ),
+          margin-top: 20px,
+        )
+      );
+      &-marker {
+        width: 6px !important;
+        height: 6px !important;
+        margin-right: 9px;
+      }
+      &-series {
+        @include media(
+          (
+            width: (
+              xxs: 48%,
+              sm: 100%,
+            ),
+          )
+        );
+        @include xxs {
+          margin: 0 0 5px !important;
+        }
+        @include md {
+          margin: 0 0 10px !important;
+        }
+      }
+      &-text {
+        font-family: $font-family !important;
+        font-weight: 500;
+        color: $greyish-black !important;
+        font-size: 14px !important;
+        .value {
+          @include media(
+            (
+              margin-left: (
+                xxs: 5px,
+                md: 15px,
+              ),
+            )
+          );
+          font-weight: 500;
+          opacity: 1;
+
+          // display: inline-block;
+        }
+      }
+    }
+  }
+}
+.apexcharts-menu.open {
+  text-align: left;
+  background: #fff;
+  box-shadow: 0px 4px 8px 0px #0000001a;
+}
+
+.apexcharts-menu-item {
+  color: $greyish-black;
+  font-weight: 500;
+  font-size: 0.875rem;
+  width: 150px;
+}
+
+.apexcharts-menu, .apexcharts-menu-open {
+  top: 4px;
+  right: 50px;
+}

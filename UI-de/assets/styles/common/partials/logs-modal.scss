@@ -1,0 +1,122 @@
+.logs_modal {
+  @include absolute-center();
+  background-color: $white;
+  border-radius: 5px;
+  overflow-y: scroll;
+  z-index: 10000; 
+  .table {
+    &-fill {
+      width: 100%;
+    }
+    &-header {
+      width: 200px;
+      &.center {
+        text-align: center;
+      }
+      &.space {
+        padding: 15px 24px;
+      }
+    }
+    &-common {
+      padding: 15px 24px;
+      &.center {
+        padding: 15px 0;
+        padding-left: 6%;
+      }
+    }
+    &-row {
+      &:not(:first-child) {
+        border-top: 1px solid #bdbdbd;
+      }
+    }
+    &-content {
+      &.inner {
+        padding: 15px 0;
+      }
+      &.compare {
+        &:not(:first-child):not(:last-child) {
+          border-right: 1px solid #bdbdbd;
+          border-left: 1px solid #bdbdbd;
+        }
+      }
+    }
+  }
+  thead {
+    border-bottom: 1px solid $pinkish-grey-two;
+    padding: 15px 0;
+    th {
+      padding: 15px 0;
+      font-size: em(10);
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $greyish-brown;
+      text-transform: uppercase;
+    }
+  }
+  .close-btn {
+    color: $warm-grey;
+    cursor: pointer;
+    &:hover {
+      color: $greyish-brown;
+    }
+  }
+}
+
+th, td {
+  line-height: 1.5;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+.aud_tab{
+  width: 80%;
+  height: 87%;
+  max-width: 1300px;
+  max-height: 90vh;
+}
+
+.aud-List .ag-root-wrapper {
+  padding-top: 0px;
+}
+
+.aud-List .ag-theme-balham .ag-header-cell {
+  padding-top: 10px;
+  padding-left: 4%;
+}
+
+.aud-List .ag-body-viewport-wrapper.ag-layout-auto-height, .ag-body-viewport-wrapper.ag-layout-normal {
+  height: 304px;
+}
+
+.aud-List {
+  .ag-root-wrapper-body .ag-layout-normal {
+     height: 85%;
+   }
+   .ag-theme-balham .ag-paging-panel {
+     height: 15%;
+   }
+   
+}
+
+.aud-List .ag-root-wrapper-body .ag-layout-normal {
+  height: 100%;
+}
+
+.aud-List .ag-body-viewport.ag-layout-normal {
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.aud-List .ag-theme-balham .ag-row {
+  padding: 0 0;
+  padding-top: 6px;
+}
+
+.aud-List .ag-theme-balham .ag-cell {
+  padding-left: 4%;
+  display: flex;
+  justify-content: flex-start;
+}

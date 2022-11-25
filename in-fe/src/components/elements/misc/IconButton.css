@@ -1,0 +1,26 @@
+.IconButton {
+    padding: 5px;
+    border-radius: 12px;
+    display: inline-grid;
+    cursor: pointer;
+    margin: 1px;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    justify-content: center;
+}
+
+.IconButtonRegular {
+    color: #1565c0;
+}
+
+.IconButtonRegular:hover
+{
+    color: white;
+    background-color:  #aaa;
+}
+
+.IconButtonSelected {
+    color: white;
+    background-color:  #1565c0;
+}

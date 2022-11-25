@@ -1,0 +1,76 @@
+.actions_cover {
+  @include flexbox();
+  @include align-items(center);
+  padding: 0 17px;
+  height: 0;
+  visibility: hidden;
+  transition: all .2s ease;
+  will-change: transform;
+  transform: translate3d(0,100%,0);
+  background-color: #f0f3ff;
+  &-item {
+    font-size: em(13);
+    font-weight: 500;
+    color: $primary-red;
+    margin-right: 37px;
+    cursor: pointer;
+    font-weight: 500;
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+      color: $warm-grey;
+      margin-right: 11px;
+    }
+    &.activate {
+      &:before {
+        content: '\f144';
+        color: #0bbd83;
+      }
+      &:disabled {
+        color: #444444;
+        &:before {
+          color: #444444;
+        }
+      }
+      color: #0bbd83;
+      background-color: #f0f3ff;
+    }
+    &.pause {
+      &:before {
+        content: '\f28b';
+        color: #ff993c;
+      }
+      &:disabled {
+        color: #444444;
+        &:before {
+          color: #444444;
+        }
+      }
+      color: #ff993c;
+      background-color: #f0f3ff;
+    }
+    &.remove {
+      &:before {
+        content: '\f056';
+        color: #f4263e;
+      }
+      background-color: #f0f3ff;
+    }
+    &.ban {
+      &:before {
+        content: '\f05e';
+      }
+    }
+    &.reject {
+      &:before {
+        content: '\f057';
+      }
+    }
+  }
+  &.active{
+    transform: translate3d(0,0,0);
+    padding: 17px 26px;
+    height: 100%;
+    visibility: visible;
+  }
+}

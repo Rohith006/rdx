@@ -1,0 +1,54 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  top: 2px;
+  font-size: 12px;
+  &.info {
+    &:before {
+      @extend %fa-icon;
+      @extend .fas;
+      // content: '\f059';
+      content: url(/assets/images/icons/info.svg);
+      margin-left: 5px;
+      color: $warm-grey;
+      font-size: em(15);
+    }
+  }
+  & .tooltiptext {
+    visibility: hidden;
+    text-transform: none;
+    width: max-content;
+    white-space: pre-line;
+    background-color: black;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.64;
+    letter-spacing: normal;
+    color: $white;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 10px;
+    top: -140%;
+    left: 140%;
+    position: absolute;
+    z-index: 1000000;
+    &::after {
+      content: ' ';
+      position: absolute;
+      top: 20px;
+      right: 100%;
+      margin-top: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent black transparent transparent;
+    }
+  }
+
+  &:hover .tooltiptext {
+    visibility: visible;
+  }
+}

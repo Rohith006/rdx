@@ -1,0 +1,33 @@
+.alignSearch{
+    display:flex;
+    flex-direction:row;
+    width: 75%;
+}
+
+.boxstyle{
+    min-width:27.5%;
+    max-width:27.5%; 
+    align-self:center;
+}
+
+.horizontalrule{
+    border-top: 1px solid rgba(68, 68, 68, 0.3);
+    border-bottom: 0px;
+    margin-top: 0px;
+}
+
+.tableview{
+    text-align:center;
+}
+
+.tablerow{
+    text-align:center;
+    font-size:0.83rem;
+}
+
+.tabledata {
+    margin: 0 5%;
+    &:not(:first-child):not(:last-child) {
+        border-right: 1px solid #bdbdbd;
+    }
+}

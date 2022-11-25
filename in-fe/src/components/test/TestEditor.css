@@ -1,0 +1,12 @@
+.TestEditor {
+  height: 100%;
+}
+
+.TestEditor .LeftColumn {
+  padding: 10px;
+  height: 95vh;
+}
+
+.TestEditor .RightColumn {
+  padding: 10px;
+}

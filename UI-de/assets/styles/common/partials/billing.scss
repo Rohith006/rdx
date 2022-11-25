@@ -1,0 +1,40 @@
+.payment {
+  @include flexbox();
+  width: 100%;
+  .card {
+    &:first-child {
+      width: 34.7%;
+      margin-right: 0.6%;
+      .card_body {
+        height: 70%;
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        .balance-value {
+          font-size: em(35);
+          color:$greenish-teal
+        }
+      }
+    }
+    &:nth-child(2n) {
+      width: 70%;
+      .card_body {
+        @include flexbox();
+        @include align-items(flex-start);
+        .errored{
+          font-size: em(11);
+          color:$grapefruit;
+        }
+      }
+    }
+  }
+}
+
+.pay-button-wrapper {
+  display: flex;
+}
+.download-transactions-btn {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}

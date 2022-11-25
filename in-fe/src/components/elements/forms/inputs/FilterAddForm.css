@@ -1,0 +1,14 @@
+.FilterAddForm > DIV {
+  display: grid;
+  grid-template-columns: auto 215px;
+  width: inherit;
+  align-items: center;
+  width: 100%;
+  padding: 24px;
+}
+
+.FilterAddForm > DIV.FullGrid {
+  display: flex !important;
+  grid-template-columns: none;
+  width: 100%;
+}

@@ -1,0 +1,12 @@
+.TuiTopHeaderWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.TuiTopHeaderWrapper > DIV > .Title {
+    font-weight: 600;
+    font-size: 120%;
+}

@@ -1,0 +1,283 @@
+.campaign {
+  &_type {
+    @include flexbox();
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+    @include media(
+      (
+        padding: (
+          xxs: 20px,
+        ),
+        height: (
+          xxs: initial,
+        ),
+      )
+    );   
+    @include lg {
+      @include flex-wrap(nowrap);
+      width: 900px;
+      margin: auto;
+    }
+
+    @include sm {
+      @include flex-wrap(wrap);
+    }
+
+    @include md {
+      @include flex-wrap(wrap);
+    }
+
+    &-item {
+      @include flexbox();
+      @include justify-content(center);
+      @include md {
+        &:nth-of-type(3n+1) {
+          @include justify-content(flex-end);
+        }
+        &:nth-of-type(3n) {
+          @include justify-content(flex-start);
+        }
+      };
+      @include media(
+        (
+          width: (
+            xxs: 100%,
+            xs: 50%,
+            sm: 31%,
+            md: 27%,
+            lg: 240px,
+          ),
+          margin-right: (
+            // xxs: 0,
+            // sm: 2%,
+            // md: 2rem,
+            // lg: 4rem,
+          ),
+          margin-bottom: (
+            xxs: 30px,
+          ),
+        )
+      );
+      align-items: center;
+      text-align: center;
+      position: relative;
+      // &:last-child {
+      //   margin-right: 1%;
+
+      .item {
+        // width: 100%;
+        // max-width: 360px;
+        height: 48vw;
+        max-height: 240px;
+        width: 100%;
+        border-radius: 5px;
+        border: solid 2px $white-three;
+        background-color: $white;
+        @include flexbox();
+        @include align-items(center);
+        @include flex-direction(column);
+        @include justify-content(center);
+        @include media(
+          (
+            width: (
+              xs: 30vw,
+              sm: 22vw,
+              md: 19vw,
+            ),
+            height: (
+              xs: 38vw,
+              sm: 30vw,
+              md: 21vw,
+            ),
+            max-height: (
+              md: 230px,
+            ),
+            max-width: (
+              md: 200px,
+            )
+          )     
+        );
+
+        max-height: 450px;
+        &:before {
+          content: "";
+          display: block;
+        }
+        .text {
+          font-size: 1rem;
+          // text-transform: uppercase;
+          font-weight: 500;
+          color: $greyish-black;
+        }
+
+        .icon {
+          width: 100%;
+          height: 150px;
+          @include media (
+            (
+              width:(
+                xs: 29vw,
+                sm: 22vw,
+                md: 14vw,
+              )
+            )
+          );
+          //filter: grayscale(100%);
+          //opacity: 0.3;
+          background-repeat: no-repeat;
+          background-position: center;
+          &.cpc {
+            background-image: url(/assets/images/icons/cpc.svg);
+          }
+
+          &.banner {
+            background-image: url(/assets/images/icons/bannerType.svg);
+          }
+
+          &.native {
+            background-image: url(/assets/images/icons/nativeType.svg);
+          }
+
+          &.video {
+            background-image: url(/assets/images/icons/videoType.svg);
+          }
+
+          &.audio {
+            background-image: url(/assets/images/icons/audioType.svg);
+          }
+
+          &.connectedtv {
+            background-image: url(/assets/images/icons/connectedTvType.svg);
+          }
+
+          &.outdoor {
+            background-image: url(/assets/images/icons/outdoorType.svg);
+          }
+
+          &.anti-fraud {
+            background-image: url(/assets/images/icons/anti-fraud.svg);
+          }
+
+          &.custom {
+            background-image: url(/assets/images/icons/whitelist.svg);
+          }
+
+          &.adv-api {
+            background-image: url(/assets/images/icons/advApi.svg);
+          }
+
+          .description {
+            position: relative;
+            top: 110px;
+            font-size: 0.86667em;
+            line-height: 1.5em;
+            color: #505050;
+          }
+        }
+
+        &.selected,
+        &:hover {
+          border: solid 2px $neutral-700;
+        }
+      }
+
+      &.inactive {
+        cursor: not-allowed !important;
+      }
+    }
+
+    &-btn {
+      border-top: 1px solid $white-three;
+      padding: 30px;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+    }
+  }
+}
+
+.requests-list {
+  .checkbox-control {
+    margin-bottom: 20px;
+    width: 33.3%;
+    display: inline-block;
+  }
+}
+
+.select-goal {
+  width: 100%;
+  div {
+    border-radius: 0;
+  }
+}
+
+.goal-container {
+  display: block !important;
+  width: 100%;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  .card_body-item {
+    width: 100% !important;
+    .form-group.w100 {
+      div {
+        align-items: flex-end;
+      }
+    }
+    div {
+      div {
+        div {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+.add-goal-btn {
+  margin: 0 30px 25px !important;
+}
+
+.browsers {
+  .br-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    width: 100%;
+  }
+  .btn {
+    margin: 0 !important;
+    align-self: flex-end;
+  }
+  .add {
+    margin-bottom: 30px !important;
+  }
+}
+.adType {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.ad_typeTitle {
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: $greyish-brown;
+  text-transform: initial;
+  display: block;
+  width: 5rem;
+}
+.Ad_type {
+  background-color: $white-three;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 500;
+  color: $greyish-black;
+  font-size: 0.875rem;
+}
+
+.campaignMacros {
+  display: flex;
+}

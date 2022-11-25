@@ -1,0 +1,75 @@
+.account_conatiner {
+  .card {
+    margin: 40px 70px 0px;
+  }
+}
+.account_section {
+  @include flexbox();
+  .account_img-cover {
+    @include flexbox();
+    @include align-items(center);
+    @include flex-direction(column);
+    margin-top: 32px;
+    margin-left: -8px;
+    width: 15%;
+    .account_img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      color: #3e66fb;
+      font-weight: 600px;
+      font-family: OpenSans;
+      font-size: 30px;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      // background-color: $white-three;
+      background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.95)
+        ),
+        #3e66fb;
+      // border: #3e66fb 1px solid;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+    .link {
+      font-size: em(13);
+      font-weight: 500;
+      line-height: 1.23;
+      color: $bright-blue;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .card_body-item {
+    width: 80%;
+    margin-bottom: 4rem;
+  }
+  .form {
+    &-group {
+      @include flexbox();
+      @include align-items(center);
+      width: 100%;
+      margin-left: 32px;
+      font-weight: 500;
+      // &details {
+      //   margin-left: 50;
+      //   font-weight: 500;
+      // }
+      &_label {
+        width: 20%;
+        max-width: 160px;
+        font-size: em(13);
+        font-weight: 500;
+        line-height: 3.85;
+        color: $greyish-brown;
+      }
+      &_field {
+        width: 80%;
+      }
+    }
+  }
+}

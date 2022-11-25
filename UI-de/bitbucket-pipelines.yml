@@ -1,0 +1,24 @@
+pipelines:
+  custom:
+    Sprinto-Slscan:
+      - step:
+          name: Slscan
+          image: shiftleft/scan:latest
+          script:
+            - scan --type depscan --no-error
+            - cat reports/depscan-report-*.json > reports/depscan-report.json 2>/dev/null || true
+            - zip reports/all-reports.zip reports/*
+            - pipe: atlassian/bitbucket-upload-file:0.3.2
+              variables:
+                  BITBUCKET_USERNAME: $BITBUCKET_USERNAME
+                  BITBUCKET_APP_PASSWORD: $BITBUCKET_APP_PASSWORD
+                  FILENAME: 'reports/depscan-report.json reports/all-reports.zip'
+          artifacts:
+           - 'reports/depscan-report.json'
+           - 'reports/all-reports.zip'
+      - step:
+          name: Deploy to test
+          deployment: test
+          # trigger: manual  # Uncomment to make this a manual deployment.
+          script:
+            - echo "Deploying to test environment"

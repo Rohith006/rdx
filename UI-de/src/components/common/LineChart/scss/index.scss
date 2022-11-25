@@ -1,0 +1,43 @@
+.line-chart_dropdown {
+  position: relative;
+  display: inline-block;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 10px;
+  &-shift-right {
+    float: right;
+  }
+  &-btn {
+    cursor: pointer;
+  }
+  &-img {
+    width: 120px;
+  }
+  &-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+    // min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(181, 177, 177);
+    border-radius: 4px;
+    z-index: 1;
+  }
+
+  &-content span {
+    cursor: pointer;
+    color: black;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: block;
+  }
+
+  &-content span:hover {
+    background-color: #ddd;
+  }
+
+  &-download-container:hover &-content {
+    display: block;
+  }
+}

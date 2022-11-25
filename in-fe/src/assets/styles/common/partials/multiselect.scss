@@ -1,0 +1,132 @@
+.multiselect {
+  &_selected {
+    margin: 24px 32px;
+    margin-bottom: 0;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+    &-title {
+      color: $greyish-black;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 21px;
+    }
+    &-item {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid $bright-blue;
+      box-shadow: 0px 0px 8px rgba(36, 145, 235, 0.4);
+      border-radius: 16px;
+      padding: 12px;
+      &_img {
+        margin-right: 12px;
+      }
+    }
+  }
+  &_container {
+    width: 40%;
+    margin-top: 24px;
+    input {
+      width: 100%;
+      border: 1px solid $white-three;
+      border-radius: 4px;
+      padding: 12px;
+      padding-left: 40px;
+      &:focus-visible {
+        outline: 1px solid $bright-blue;
+      }
+    }
+  }
+  &_input {
+    &-img {
+      margin-left: 16px;
+    }
+  }
+  &_header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.3);
+  }
+  &_category {
+    &-container {
+      margin-top: 16px;
+    }
+    &-item {
+      background: rgba(244, 38, 62, 0.2);
+      border: 1px solid rgba(244, 38, 62, 0.5);
+      border-radius: 4px;
+      padding: 8px 16px;
+      gap: 4px;
+    }
+  }
+  &_list {
+    padding: 32px;
+    max-height: 400px;
+    overflow: auto;
+    &-item {
+      border: 1px solid rgba(34, 34, 34, 0.28);
+      border-radius: 16px;
+      padding: 12px;
+      margin-bottom: 24px;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid $bright-blue;
+        box-shadow: 0px 0px 8px rgba(36, 145, 235, 0.4);
+      }
+      &_img {
+        margin-right: 12px;
+      }
+      &_name {
+        color: $greyish-brown;
+        font-weight: 500;
+        font-size: 14px;
+      }
+      &_category {
+        color: rgba(68, 68, 68, 0.5);
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.light {
+  &_text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(68, 68, 68, 0.5);
+    margin-right: 12px;
+  }
+}
+
+.red {
+  &_img {
+    cursor: pointer;
+  }
+}
+
+.selectedType {
+  &_container {
+    display: flex;
+    align-items: center;
+    border: 1px solid $white-three;
+    padding: 4px 12px;
+    border-radius: 8px;
+  }
+  &_item {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+  }
+  &_title {
+    color: $greyish-brown;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &_category {
+    color: rgba(68, 68, 68, 0.5);
+    font-size: 12px;
+    font-weight: 500;
+  }
+}

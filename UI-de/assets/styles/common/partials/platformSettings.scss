@@ -1,0 +1,25 @@
+.platform-settings {
+  margin: 40px 70px 0px;
+  .tooltiptext {
+    top: -100% !important;
+  }
+  .form-group_row {
+    display: flex;
+    width: 50%;
+  }
+  .text {
+    display: flex;
+    flex-direction: row;
+  }
+  .input-md {
+    width: 500px;
+  }
+  .btn {
+    .white {
+      margin-right: 16px;
+    }
+  }
+  .form_submit-btn {
+    margin-top: 112px;
+  }
+}

@@ -1,0 +1,38 @@
+.pending-container {
+  position: relative;
+
+  &--pending {
+    .pending-container__children {
+      opacity: .1!important;
+    }
+
+    .pending-container__spinner {
+      opacity: 1!important;
+    }
+  }
+
+  &__spinner {
+    transition: all .3s ease;
+    opacity: 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    &.setting {
+      top: 140px;
+    }
+  }
+
+  &__children {
+    opacity: 1;
+    transition: all .3s ease;
+  }
+  .css-qw58x8-style,
+  .css-1l90oe4-style,
+  .css-qw58x8-style{
+    background-color: lighten($highlight-color, 20%);
+  }
+}

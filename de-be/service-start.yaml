@@ -1,0 +1,7 @@
+apps:
+  script: "./server.js"
+  name: "rest-server"
+  exec_mode: "fork"
+  cwd: "/opt/rest-server"
+  error_file: "/proc/1/fd/1"
+  out_file: "/proc/1/fd/1"

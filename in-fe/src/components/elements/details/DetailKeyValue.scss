@@ -1,0 +1,36 @@
+.DetailKeyValue {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-top: 2rem;
+  min-height: 15px;
+}
+
+.DetailKeyValue .DetailValue {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  padding-left: 10px;
+  color: #22222280;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.DetailKeyValue .DetailKey {
+  flex: 0.5;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-left: 10px;
+  color: #444;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 21px;
+}

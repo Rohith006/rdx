@@ -1,0 +1,45 @@
+SPAN.Button {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-transform: initial;
+  user-select: none;
+  background-color: #f4263e;
+  color: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  background-position: center;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 4px 8px;
+}
+
+SPAN.Button:hover {
+  color: white;
+  background-color: #e22238;
+}
+
+SPAN.DisabledButton {
+  border: solid 2px #888;
+  color: #888;
+}
+SPAN.ConfirmedButton {
+  border: solid 2px #43a047;
+  background-color: #43a047;
+  color: whitesmoke;
+}
+SPAN.ErrorButton {
+  border: solid 2px #d81b60;
+  background-color: #d81b60;
+  color: whitesmoke;
+}
+SPAN.ButtonSelected {
+  background-color: #006db3;
+  color: white;
+}

@@ -1,0 +1,130 @@
+@mixin transition($property: all, $duration: 0.3s, $timing: ease-in-out) {
+  -webkit-transition: $property $duration $timing;
+  -moz-transition: $property $duration $timing;
+  -ms-transition: $property $duration $timing;
+  -o-transition: $property $duration $timing;
+  transition: $property $duration $timing;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin link($link, $visit, $hover, $active) {
+  a {
+    color: $link;
+    &:visited {
+      color: $visit;
+    }
+    &:hover {
+      color: $hover;
+    }
+    &:active {
+      color: $active;
+    }
+  }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+  // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+  -webkit-animation: $name $duration $iterations $timing-function $delay;
+  -moz-animation: $name $duration $iterations $timing-function $delay;
+  -o-animation: $name $duration $iterations $timing-function $delay;
+  animation: $name $duration $iterations $timing-function $delay;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=($opacity * 100));
+}
+
+@mixin box-shadow( $h: 10px , $v: 10px , $b: 0px , $s: 0px , $c: #000000 ) {
+  -webkit-box-shadow: $h $v $b $s $c;
+  -moz-box-shadow: $h $v $b $s $c;
+  box-shadow: $h $v $b $s $c;
+}
+
+@mixin xPos($x) {
+  -webkit-transform: translateX($x);
+  -moz-transform: translateX($x);
+  -ms-transform: translateX($x);
+  transform: translateX($x);
+}
+
+@mixin yPos($y) {
+  -webkit-transform: translateY($y);
+  -moz-transform: translateY($y);
+  -ms-transform: translateY($y);
+  transform: translateY($y);
+}
+
+@mixin translate($y, $x) {
+  -webkit-transform: translate($y, $x);
+  -moz-transform: translate($y, $x);
+  -ms-transform: translate($y, $x);
+  transform: translate($y, $x);
+}
+
+@mixin absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  @include translate(-50%, -50%);
+}
+
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+  }
+}
+
+//transitions mixin
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+//position absolute mixin
+@mixin position-absolute($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+/*font size px to em */
+$browser-context: 15;
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}

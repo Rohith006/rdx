@@ -1,0 +1,38 @@
+.ObjectList {
+    display: grid;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px transparent solid;
+}
+
+.EndOfList {
+    /*border-bottom: 2px #006db3 solid !important;*/
+}
+
+.ObjectList > .Header {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    font-weight: 600;
+    height: 30px;
+    align-items: center;
+}
+
+.ObjectList .Header > .Timestamp {
+    width: 230px;
+    padding: 2px 5px 5px 15px;
+}
+
+.ObjectList .Header > .Data {
+    padding: 2px 5px 5px 15px;
+}
+
+.ObjectList > .DataContent {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.ObjectListStatus {
+    height: 21px;
+    border-top: 1px solid #ccc;
+}
